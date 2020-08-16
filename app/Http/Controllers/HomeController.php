@@ -7,7 +7,14 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
-    public function index(){
 
+    public function index()
+    {
+        $data = [
+            "name" => "Lee ingta",
+            "age" => 23,
+        ];
+        return view("welcome", $data);
     }
+
 }

@@ -2,24 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class CategoryController extends Controller
 {
     //
-    public function index(){
+        public function index()
+        {
+            $categories = Category::all();
+            return $categories;
+        }
 
-    }
-    public function show(){
+        public function show($id)
+        {
+            $category = Category::find($id);
+            return $category;
+        }
 
-    }
     public function creat(){
 
     }
-    public function store(){
+    public function store(Request $request){
 
     }
-    public function edit(){
+    public function edit($id){
 
     }
     public function update(){
